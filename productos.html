@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Canino - Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="productos-page">
+    <header>
+        <div class="logo">
+            <img src="1.png" alt="Imagen 1">
+            <img src="2.png" alt="Imagen 2">
+            <img src="3.png" alt="Imagen 3">
+            <h1>Club Canino</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="notification" style="display: none; position: fixed; bottom: 80px; right: 20px; background-color: #007BFF; color: white; padding: 15px 20px; border-radius: 8px; font-size: 16px; font-weight: bold; z-index: 1001; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        Se agregó al carrito
+    </div>
+    <main>
+        <section id="ropa">
+            <h2><img src="7.png" alt="Imagen 7"> Ropa</h2>
+            <div class="products-grid">
+        <!-- Checkout moved to the end of the page -->
+                <div class="product">
+                    <img src="ROPA.jpeg" alt="Ropa 1">
+                    <p>Precio: 14 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-ropa1">Color:</label>
+                            <select id="color-ropa1" class="color-select">
+                                <option value="rosado">Rosado</option>
+                                <option value="celeste">Celeste</option>
+                                <option value="negro">Negro</option>
+                                <option value="rojo">Rojo</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <label for="size-ropa1">Talla:</label>
+                            <select id="size-ropa1" class="size-select">
+                                <!-- tallas 1 a 14 -->
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-ropa1">Cantidad:</label>
+                            <input type="number" id="qty-ropa1" name="qty-ropa1" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="ROPA1.jpeg" alt="Ropa 2">
+                    <p>Precio: 14 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-ropa2">Color:</label>
+                            <select id="color-ropa2" class="color-select">
+                                <option value="rosado">Rosado</option>
+                                <option value="negro">Negro</option>
+                                <option value="morado">Morado</option>
+                                <option value="azul">Azul</option>
+                                <option value="cafe">Café</option>
+                                <option value="naranja">Naranja</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <label for="size-ropa2">Talla:</label>
+                            <select id="size-ropa2" class="size-select">
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-ropa2">Cantidad:</label>
+                            <input type="number" id="qty-ropa2" name="qty-ropa2" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="ROPA2.jpeg" alt="Ropa 3">
+                    <p>Precio: 18 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-ropa3">Color:</label>
+                            <select id="color-ropa3" class="color-select">
+                                <option value="azul">Azul</option>
+                                <option value="cafe">Café</option>
+                                <option value="rojo">Rojo</option>
+                                <option value="plomo">Plomo</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <label for="size-ropa3">Talla:</label>
+                            <select id="size-ropa3" class="size-select">
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-ropa3">Cantidad:</label>
+                            <input type="number" id="qty-ropa3" name="qty-ropa3" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="ROPA3.jpeg" alt="Ropa 4">
+                    <p>Precio: 22 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-ropa4">Color:</label>
+                            <select id="color-ropa4" class="color-select">
+                                <option value="azul">Azul</option>
+                                <option value="cafe">Café</option>
+                                <option value="rojo">Rojo</option>
+                                <option value="plomo">Plomo</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <label for="size-ropa4">Talla:</label>
+                            <select id="size-ropa4" class="size-select">
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-ropa4">Cantidad:</label>
+                            <input type="number" id="qty-ropa4" name="qty-ropa4" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="ROPA4.jpg" alt="Ropa 5">
+                    <p>Precio: 15 soles</p>
+                    <div class="product-controls">
+                        <div class="size">
+                            <label for="size-ropa5">Talla:</label>
+                            <select id="size-ropa5" class="size-select">
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-ropa5">Cantidad:</label>
+                            <input type="number" id="qty-ropa5" name="qty-ropa5" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="ROPA5.jpg" alt="Ropa 6">
+                    <p>Precio: 23 soles</p>
+                    <div class="product-controls">
+                        <div class="size">
+                            <label for="size-ropa6">Talla:</label>
+                            <select id="size-ropa6" class="size-select">
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-ropa6">Cantidad:</label>
+                            <input type="number" id="qty-ropa6" name="qty-ropa6" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="ROPA6.jpg" alt="Ropa 7">
+                    <p>Precio: 23 soles</p>
+                    <div class="product-controls">
+                        <div class="size">
+                            <label for="size-ropa7">Talla:</label>
+                            <select id="size-ropa7" class="size-select">
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-ropa7">Cantidad:</label>
+                            <input type="number" id="qty-ropa7" name="qty-ropa7" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="comida">
+            <h2><img src="8.png" alt="Imagen 8"> Comida</h2>
+            <div class="products-grid">
+                <div class="product">
+                    <img src="comida1.jpeg" alt="Comida 1">
+                    <p>Precio: 9 soles</p>
+                    <div class="product-controls">
+                        <div class="quantity">
+                            <label for="qty-comida1">Cantidad:</label>
+                            <input type="number" id="qty-comida1" name="qty-comida1" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="comida2.webp" alt="Comida 2">
+                    <p>Precio:  10 soles</p>
+                    <div class="product-controls">
+                        <div class="quantity">
+                            <label for="qty-comida2">Cantidad:</label>
+                            <input type="number" id="qty-comida2" name="qty-comida2" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="comida3.webp" alt="Comida 3">
+                    <p>Precio: 8 soles</p>
+                    <div class="product-controls">
+                        <div class="quantity">
+                            <label for="qty-comida3">Cantidad:</label>
+                            <input type="number" id="qty-comida3" name="qty-comida3" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="comida4.jpeg" alt="Comida 4">
+                    <p>Precio: 16 soles</p>
+                    <div class="product-controls">
+                        <div class="quantity">
+                            <label for="qty-comida4">Cantidad:</label>
+                            <input type="number" id="qty-comida4" name="qty-comida4" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="juguetes">
+            <h2><img src="6.png" alt="Imagen 6"> Juguetes</h2>
+            <div class="products-grid">
+                <div class="product">
+                    <img src="JUGUETES1.jpeg" alt="Juguete 1">
+                    <p>Precio: 8 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-juguete1">Color:</label>
+                            <select id="color-juguete1" class="color-select">
+                                <option value="verde">Verde</option>
+                                <option value="naranja">Naranja</option>
+                                <option value="rosado">Rosado</option>
+                                <option value="verde claro">Verde Claro</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-juguete1">Cantidad:</label>
+                            <input type="number" id="qty-juguete1" name="qty-juguete1" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="JUGUETES2.jpg" alt="Juguete 2">
+                    <p>Precio: 10 soles</p>
+                    <div class="product-controls">
+                        <div class="tipo">
+                            <label for="tipo-juguete2">Tipo:</label>
+                            <select id="tipo-juguete2" class="tipo-select">
+                                <option value="chancho">Chancho</option>
+                                <option value="pato">Pato</option>
+                                <option value="elefante">Elefante</option>
+                                <option value="leon">León</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-juguete2">Cantidad:</label>
+                            <input type="number" id="qty-juguete2" name="qty-juguete2" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="JUEGUETES3.jpg" alt="Juguete 3">
+                    <p>Precio: 9 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-juguete3">Color:</label>
+                            <select id="color-juguete3" class="color-select">
+                                <option value="verde">Verde</option>
+                                <option value="naranja">Naranja</option>
+                                <option value="rosado">Rosado</option>
+                                <option value="verde claro">Verde Claro</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-juguete3">Cantidad:</label>
+                            <input type="number" id="qty-juguete3" name="qty-juguete3" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="JUGUETES3.webp" alt="Juguete 4">
+                    <p>Precio: 12 soles</p>
+                    <div class="product-controls">
+                        <div class="quantity">
+                            <label for="qty-juguete4">Cantidad:</label>
+                            <input type="number" id="qty-juguete4" name="qty-juguete4" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="correas">
+            <h2><img src="9.png" alt="Imagen 9"> Correas</h2>
+            <div class="products-grid">
+                <div class="product">
+                    <img src="CORREA1.jpeg" alt="Correa 1">
+                    <p>Precio: 23 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-correa1">Color:</label>
+                            <select id="color-correa1" class="color-select">
+                                <option value="negro">Negro</option>
+                                <option value="verde">Verde</option>
+                                <option value="rojo">Rojo</option>
+                                <option value="azul">Azul</option>
+                                <option value="naranja">Naranja</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <label for="size-correa1">Tamaño:</label>
+                            <select id="size-correa1" class="size-select">
+                                <option value="">--</option>
+                                <option value="chiquito">Chiquito</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-correa1">Cantidad:</label>
+                            <input type="number" id="qty-correa1" name="qty-correa1" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="CORREA2.jpeg" alt="Correa 2">
+                    <p>Precio: 22 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-correa2">Color:</label>
+                            <select id="color-correa2" class="color-select">
+                                <option value="azul">Azul</option>
+                                <option value="naranja">Naranja</option>
+                                <option value="rojo">Rojo</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <label for="size-correa2">Tamaño:</label>
+                            <select id="size-correa2" class="size-select">
+                                <option value="">--</option>
+                                <option value="chiquito">Chiquito</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-correa2">Cantidad:</label>
+                            <input type="number" id="qty-correa2" name="qty-correa2" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="CORREA3.webp" alt="Correa 3">
+                    <p>Precio: 27 soles</p>
+                    <div class="product-controls">
+                        <div class="color">
+                            <label for="color-correa3">Color:</label>
+                            <select id="color-correa3" class="color-select">
+                                <option value="rojo">Rojo</option>
+                                <option value="verde">Verde</option>
+                                <option value="amarillo">Amarillo</option>
+                                <option value="azul">Azul</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <label for="size-correa3">Tamaño:</label>
+                            <select id="size-correa3" class="size-select">
+                                <option value="">--</option>
+                                <option value="chiquito">Chiquito</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <label for="qty-correa3">Cantidad:</label>
+                            <input type="number" id="qty-correa3" name="qty-correa3" min="1" value="1">
+                        </div>
+                        <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <button id="cart-toggle" class="floating-cart-btn" onclick="toggleCartView()">🛒</button>
+    <div id="cart">
+        <h3>Carrito</h3>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+    </div>
+    <div class="payment-actions">
+        <!-- Botón para abrir PayPal -->
+        <button id="pay-footer-btn" class="btn-pay btn-pay-paypal" onclick="prepareAndOpenPayPal()">Pagar con PayPal</button>
+        <!-- Botón para Yape -->
+        <button id="pay-yape-btn" class="btn-pay btn-pay-yape" onclick="openYapeForm()">Pagar con Yape</button>
+    </div>
+    <!-- Modal para Yape -->
+    <div id="yape-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; display:flex; justify-content:center; align-items:center;">
+        <div style="background: linear-gradient(135deg, #f5f5f5, #ffffff); padding:30px; border-radius:15px; max-width:450px; width:90%; box-shadow: 0 15px 35px rgba(0,0,0,0.4); position:relative; animation: fadeIn 0.3s ease-in-out;">
+            <button onclick="closeYapeModal()" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:24px; cursor:pointer; color:#666;">&times;</button>
+            <h3 style="text-align:center; color:#800080; font-size:28px; margin-bottom:10px; font-weight:bold;">Pagar con Yape 💳</h3>
+            <p style="text-align:center; font-weight:bold; margin-bottom:25px; color:#333; font-size:16px;">Número de Yape: <span style="color:#800080; font-size:18px;">921799922</span></p>
+            <form id="yape-form" onsubmit="submitYapeForm(event)">
+                <div style="margin-bottom:20px;">
+                    <label for="yape-name" style="display:block; margin-bottom:5px; font-weight:bold; color:#333; font-size:14px;">Nombre:</label>
+                    <input type="text" id="yape-name" name="yape-name" required style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px; font-size:16px; transition: border-color 0.3s; box-sizing:border-box;" onfocus="this.style.borderColor='#800080'" onblur="this.style.borderColor='#ddd'">
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label for="yape-phone" style="display:block; margin-bottom:5px; font-weight:bold; color:#333; font-size:14px;">Teléfono:</label>
+                    <input type="tel" id="yape-phone" name="yape-phone" required style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px; font-size:16px; transition: border-color 0.3s; box-sizing:border-box;" onfocus="this.style.borderColor='#800080'" onblur="this.style.borderColor='#ddd'">
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label for="yape-address" style="display:block; margin-bottom:5px; font-weight:bold; color:#333; font-size:14px;">Dirección:</label>
+                    <input type="text" id="yape-address" name="yape-address" required style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px; font-size:16px; transition: border-color 0.3s; box-sizing:border-box;" onfocus="this.style.borderColor='#800080'" onblur="this.style.borderColor='#ddd'">
+                </div>
+                <div style="margin-bottom:25px;">
+                    <label for="yape-capture" style="display:block; margin-bottom:5px; font-weight:bold; color:#333; font-size:14px;">Subir Captura de Pago:</label>
+                    <input type="file" id="yape-capture" name="yape-capture" accept="image/*" required style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px; font-size:16px; transition: border-color 0.3s; box-sizing:border-box;" onfocus="this.style.borderColor='#800080'" onblur="this.style.borderColor='#ddd'">
+                </div>
+                <div style="text-align:center;">
+                    <button type="submit" style="padding:12px 30px; background: linear-gradient(135deg, #800080, #a000a0); color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:16px; font-weight:bold; transition: background 0.3s; margin-right:10px;" onmouseover="this.style.background='linear-gradient(135deg, #a000a0, #c000c0)'" onmouseout="this.style.background='linear-gradient(135deg, #800080, #a000a0)'">Enviar 📤</button>
+                    <button type="button" onclick="closeYapeModal()" style="padding:12px 30px; background: linear-gradient(135deg, #f0f0f0, #e0e0e0); color:#333; border:none; border-radius:8px; cursor:pointer; font-size:16px; font-weight:bold; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #e0e0e0, #d0d0d0)'" onmouseout="this.style.background='linear-gradient(135deg, #f0f0f0, #e0e0e0)'">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Checkout: nombre, dirección, teléfono, total y PayPal -->
+    <section id="checkout">
+        <h3 style="text-align:center; color:#0070ba; font-size:24px; margin-bottom:20px; font-weight:bold;">Checkout 🛒</h3>
+
+        <!-- Formulario de checkout: nombre, dirección, teléfono -->
+        <form id="checkout-form" onsubmit="event.preventDefault(); prepareAndOpenPayPal();" style="max-width:820px;margin:0 auto 18px; display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div>
+                <label for="buyer-name">Nombre completo</label>
+                <input type="text" id="buyer-name" name="buyer-name" placeholder="Tu nombre" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd;">
+            </div>
+            <div>
+                <label for="buyer-phone">Teléfono</label>
+                <input type="tel" id="buyer-phone" name="buyer-phone" placeholder="9XXXXXXXX" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd;">
+            </div>
+            <div style="grid-column:1 / -1;">
+                <label for="buyer-address">Dirección de entrega</label>
+                <input type="text" id="buyer-address" name="buyer-address" placeholder="Dirección, ciudad, referencia" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd;">
+            </div>
+            <p class="checkout-total-display" style="grid-column:1 / -1; text-align:center; font-weight:700; margin:6px 0;">Total: $<span id="checkout-total">0.00</span></p>
+            <div style="grid-column:1 / -1; text-align:center;">
+                <div id="paypal-button-container" style="display:inline-block; margin-right:12px;"></div>
+            </div>
+        </form>
+
+    <!-- PayPal SDK (client-id proporcionado por el usuario) -->
+    <!-- SDK PayPal en modo SANDBOX para pruebas -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+
+    <script>
+        let cart = [];
+        let cartVisible = false;
+
+        function addToCart(button) {
+            const productDiv = button.closest('.product');
+            const name = productDiv.querySelector('img').alt;
+            const priceText = productDiv.querySelector('p').textContent || '';
+            const priceNumber = priceText.replace(/[^0-9\.,]/g, '').replace(',', '.');
+            const price = parseFloat(priceNumber) || 0;
+            const quantity = parseInt(productDiv.querySelector('input[type="number"]').value);
+            const image = productDiv.querySelector('img').src;
+
+            const colorSelect = productDiv.querySelector('.color-select');
+            const color = colorSelect ? colorSelect.value : '';
+            const sizeSelect = productDiv.querySelector('.size-select');
+            const size = sizeSelect ? sizeSelect.value : '';
+
+            const id = `${name}|${color}|${size}`;
+            const existingItem = cart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ id, name, price, quantity, image, color, size });
+            }
+
+            updateCartDisplay();
+            showNotification();
+        }
+
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        function toggleColorSelect(button) {
+            const productDiv = button.closest('.product');
+            const select = productDiv.querySelector('.color-select');
+            if (!select) return;
+            select.style.display = (select.style.display === 'none' || select.style.display === '') ? 'block' : 'none';
+        }
+
+        function toggleCartView() {
+            cartVisible = !cartVisible;
+            const cartElement = document.getElementById('cart');
+            if (cartVisible) {
+                cartElement.classList.add('open');
+            } else {
+                cartElement.classList.remove('open');
+            }
+            updateCartDisplay();
+        }
+
+        function increaseQuantity(index) {
+            cart[index].quantity += 1;
+            updateCartDisplay();
+        }
+
+        function decreaseQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1;
+            } else {
+                removeItem(index);
+            }
+            updateCartDisplay();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsDiv = document.getElementById('cart-items');
+            const cartTotalDiv = document.getElementById('cart-total');
+            cartItemsDiv.innerHTML = '';
+            // calcular total siempre (necesario para checkout/PayPal aunque el carrito esté oculto)
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            if (cartVisible) {
+                cart.forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'cart-item';
+
+                    const itemImage = document.createElement('img');
+                    itemImage.src = item.image;
+                    itemImage.alt = item.name;
+                    itemImage.className = 'cart-item-image';
+                    itemDiv.appendChild(itemImage);
+
+                    const itemDetails = document.createElement('div');
+                    itemDetails.className = 'cart-item-details';
+
+                    const itemName = document.createElement('p');
+                    itemName.textContent = item.name;
+                    itemDetails.appendChild(itemName);
+
+                    if (item.color) {
+                        const itemColor = document.createElement('p');
+                        itemColor.textContent = `Color: ${item.color}`;
+                        itemDetails.appendChild(itemColor);
+                    }
+
+                    if (item.size) {
+                        const itemSize = document.createElement('p');
+                        itemSize.textContent = `Talla: ${item.size}`;
+                        itemDetails.appendChild(itemSize);
+                    }
+
+                    const itemPrice = document.createElement('p');
+                    itemPrice.textContent = `Precio: $${item.price}`;
+                    itemDetails.appendChild(itemPrice);
+
+                    const itemQuantity = document.createElement('p');
+                    itemQuantity.textContent = `Cantidad: ${item.quantity}`;
+                    itemDetails.appendChild(itemQuantity);
+
+                    const itemTotal = document.createElement('p');
+                    itemTotal.textContent = `Total: $${item.price * item.quantity}`;
+                    itemDetails.appendChild(itemTotal);
+
+                    itemDiv.appendChild(itemDetails);
+
+                    const controlsDiv = document.createElement('div');
+                    controlsDiv.className = 'cart-controls';
+
+                    const decreaseBtn = document.createElement('button');
+                    decreaseBtn.textContent = '-';
+                    decreaseBtn.onclick = () => decreaseQuantity(index);
+                    controlsDiv.appendChild(decreaseBtn);
+
+                    const increaseBtn = document.createElement('button');
+                    increaseBtn.textContent = '+';
+                    increaseBtn.onclick = () => increaseQuantity(index);
+                    controlsDiv.appendChild(increaseBtn);
+
+                    const removeBtn = document.createElement('button');
+                    removeBtn.textContent = 'X';
+                    removeBtn.className = 'remove-btn';
+                    removeBtn.onclick = () => removeItem(index);
+                    controlsDiv.appendChild(removeBtn);
+
+                    itemDiv.appendChild(controlsDiv);
+                    cartItemsDiv.appendChild(itemDiv);
+                });
+
+                cartTotalDiv.textContent = `Total del Carrito: $${total}`;
+            } else {
+                cartTotalDiv.textContent = '';
+            }
+
+            // actualizar total de checkout y exponerlo para PayPal siempre
+            const checkoutSpan = document.getElementById('checkout-total');
+            if (checkoutSpan) checkoutSpan.textContent = total.toFixed(2);
+            window.checkoutTotal = parseFloat(total.toFixed(2));
+        }
+
+        // Inicializar botones PayPal (intenta reintentar si SDK no ha cargado aún)
+        function renderPayPalButtons() {
+            if (!window.paypal) {
+                setTimeout(renderPayPalButtons, 300);
+                return;
+            }
+
+            // limpiar contenedor antes de renderizar
+            const container = document.getElementById('paypal-button-container');
+            if (!container) return;
+            container.innerHTML = '';
+
+            window.paypal.Buttons({
+                style: { layout: 'vertical' },
+                createOrder: function(data, actions) {
+                    try {
+                        const total = window.checkoutTotal || 0;
+                        const name = document.getElementById('buyer-name').value.trim();
+                        const address = document.getElementById('buyer-address').value.trim();
+                        const phone = document.getElementById('buyer-phone').value.trim();
+                        if (!name || !address || !phone) {
+                            alert('Por favor completa Nombre, Dirección y Teléfono antes de pagar.');
+                            return Promise.reject(new Error('Datos incompletos'));
+                        }
+                        if (total <= 0) {
+                            alert('El carrito está vacío. Añade productos antes de pagar.');
+                            return Promise.reject(new Error('Carrito vacío'));
+                        }
+                        return actions.order.create({
+                            purchase_units: [{ amount: { value: total.toFixed(2) } }]
+                        }).catch(function(err){
+                            console.error('createOrder error', err);
+                            alert('Error creando la orden: ' + (err && err.message ? err.message : JSON.stringify(err)));
+                            return Promise.reject(err);
+                        });
+                    } catch (err) {
+                        console.error('createOrder sync error', err);
+                        alert('Error inesperado al crear la orden: ' + (err && err.message ? err.message : JSON.stringify(err)));
+                        return Promise.reject(err);
+                    }
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        const payerName = (details.payer && details.payer.name && details.payer.name.given_name) ? details.payer.name.given_name : '';
+                        alert('Pago completado. Gracias, ' + payerName + '!');
+                        const orderId = data.orderID || data.id || ('ORD-' + Date.now());
+                        // snapshot del carrito antes de limpiar
+                        const cartSnapshot = cart.map(item => ({...item}));
+                        const total = window.checkoutTotal || cartSnapshot.reduce((s,i)=>s+(i.price*i.quantity),0);
+
+                        // Obtener datos del formulario de checkout
+                        const buyerName = document.getElementById('buyer-name').value;
+                        const buyerPhone = document.getElementById('buyer-phone').value;
+                        const buyerAddress = document.getElementById('buyer-address').value;
+
+                        // Crear el cuerpo del email para PayPal
+                        const subject = 'Pago con PayPal - Club Canino';
+                        const body = `Nombre: ${buyerName}\nTeléfono: ${buyerPhone}\nDirección: ${buyerAddress}\n\nPago realizado con PayPal.\nID de orden: ${orderId}\n\nTotal a pagar: $${total.toFixed(2)}\n\nProductos:\n${cartSnapshot.map(item => `- ${item.name} x${item.quantity} ($${item.price} c/u)`).join('\n')}\n\n¡Gracias por tu compra!`;
+
+                        // Crear mailto link
+                        const mailtoLink = `mailto:y.flores.choque@isur.edu.pe?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                        // Abrir el cliente de email
+                        window.location.href = mailtoLink;
+
+                        // generar comprobante imprimible y descargable
+                        // Función de recibo básica para evitar error
+                        if (typeof generateReceipt === 'function') {
+                            generateReceipt({ orderId, payerName, total, details }, cartSnapshot);
+                        } else {
+                            // Recibo simple: mostrar datos en alerta
+                            alert('Pago exitoso.\nID de orden: ' + orderId + '\nTotal: $' + total.toFixed(2));
+                        }
+                        // --- Recibo visual y descargable ---
+                        function generateReceipt(order, cart) {
+                            // Obtener datos del formulario de checkout
+                            const buyerName = document.getElementById('buyer-name').value;
+                            const buyerPhone = document.getElementById('buyer-phone').value;
+                            const buyerAddress = document.getElementById('buyer-address').value;
+
+                            // Generar contenido del voucher como texto plano con letras grandes
+                            let voucherContent = `VOUCHER DE PAGO - CLUB CANINO\n\n`;
+                            voucherContent += `Fecha: ${new Date().toLocaleString()}\n\n`;
+                            voucherContent += `DATOS DEL COMPRADOR:\n`;
+                            voucherContent += `Nombre: ${buyerName}\n`;
+                            voucherContent += `Teléfono: ${buyerPhone}\n`;
+                            voucherContent += `Dirección: ${buyerAddress}\n\n`;
+                            voucherContent += `PRODUCTOS SELECCIONADOS:\n`;
+                            if (Array.isArray(cart) && cart.length) {
+                                cart.forEach(item => {
+                                    voucherContent += `- ${item.name} (Cantidad: ${item.quantity}) - Precio unitario: S/ ${item.price}\n`;
+                                    if (item.color) voucherContent += `  Color: ${item.color}\n`;
+                                    if (item.size) voucherContent += `  Talla: ${item.size}\n`;
+                                });
+                            } else {
+                                voucherContent += '- Sin productos\n';
+                            }
+                            voucherContent += `\nTOTAL A PAGAR: S/ ${order.total.toFixed(2)}\n\n`;
+                            voucherContent += `MÉTODO DE PAGO: PayPal\n`;
+                            voucherContent += `ID de orden: ${order.orderId}\n\n`;
+                            voucherContent += `¡Gracias por tu compra! 🐾`;
+
+                            // Mostrar voucher en modal con letras grandes
+                            showPayPalVoucherModal(voucherContent);
+
+                            // Descargar automáticamente el voucher (texto plano)
+                            (function autoDownloadVoucher() {
+                                const blob = new Blob([voucherContent], {type: 'text/plain'});
+                                const url = URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = `voucher_paypal_${buyerName.replace(/\s+/g, '_')}_${Date.now()}.txt`;
+                                document.body.appendChild(a);
+                                a.click();
+                                setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
+                            })();
+                        }
+
+                        // Función para mostrar modal del voucher de PayPal
+                        function showPayPalVoucherModal(content) {
+                            // Crear modal si no existe
+                            let modal = document.getElementById('paypal-voucher-modal');
+                            if (!modal) {
+                                modal = document.createElement('div');
+                                modal.id = 'paypal-voucher-modal';
+                                modal.style = 'display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; display:flex; justify-content:center; align-items:center;';
+                                modal.innerHTML = `
+                                    <div style="background: linear-gradient(135deg, #f5f5f5, #ffffff); padding:30px; border-radius:15px; max-width:600px; width:90%; box-shadow: 0 15px 35px rgba(0,0,0,0.4); position:relative; animation: fadeIn 0.3s ease-in-out;">
+                                        <button onclick="closePayPalVoucherModal()" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:24px; cursor:pointer; color:#666;">&times;</button>
+                                        <h3 style="text-align:center; color:#0070ba; font-size:28px; margin-bottom:10px; font-weight:bold;">Voucher de PayPal 💳</h3>
+                                        <pre style="font-family:monospace; font-size:16px; line-height:1.5; white-space:pre-wrap; color:#333; background:#fff; padding:20px; border-radius:8px; border:1px solid #ddd;">${content}</pre>
+                                        <div style="text-align:center; margin-top:20px;">
+                                            <button onclick="closePayPalVoucherModal()" style="padding:12px 30px; background: linear-gradient(135deg, #0070ba, #005a87); color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:16px; font-weight:bold; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #005a87, #004080)'" onmouseout="this.style.background='linear-gradient(135deg, #0070ba, #005a87)'">Cerrar</button>
+                                        </div>
+                                    </div>
+                                `;
+                                document.body.appendChild(modal);
+                            } else {
+                                // Actualizar contenido
+                                modal.querySelector('pre').textContent = content;
+                            }
+                            modal.style.display = 'flex';
+                        }
+
+                        // Función para cerrar modal del voucher de PayPal
+                        window.closePayPalVoucherModal = function() {
+                            const modal = document.getElementById('paypal-voucher-modal');
+                            if (modal) {
+                                modal.style.display = 'none';
+                            }
+                        }
+                        // limpiar carrito
+                        cart = [];
+                        updateCartDisplay();
+                    });
+                },
+                onError: function(err) {
+                    console.error('PayPal error', err);
+                    try {
+                        var msg = (err && err.message) ? err.message : JSON.stringify(err);
+                    } catch(e) {
+                        var msg = 'Error desconocido';
+                    }
+                    alert('Ocurrió un error durante el pago: ' + msg + '\nRevisa la consola para más detalles.');
+                }
+            }).render('#paypal-button-container');
+        }
+
+        // arrancar renderizado de PayPal
+        renderPayPalButtons();
+        
+        // Prepara y muestra la sección de checkout, renderiza botones PayPal y hace scroll
+        function prepareAndOpenPayPal() {
+            const name = document.getElementById('buyer-name').value.trim();
+            const address = document.getElementById('buyer-address').value.trim();
+            const phone = document.getElementById('buyer-phone').value.trim();
+            if (!name || !address || !phone) {
+                alert('Por favor completa Nombre, Dirección y Teléfono antes de pagar.');
+                document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+            // actualizar total y renderizar botones
+            updateCartDisplay();
+            renderPayPalButtons();
+            // desplazar a los botones PayPal
+            const container = document.getElementById('paypal-button-container');
+            if (container) container.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Funciones para el modal de Yape
+        function openYapeForm() {
+            document.getElementById('yape-modal').style.display = 'flex';
+        }
+
+        function closeYapeModal() {
+            document.getElementById('yape-modal').style.display = 'none';
+        }
+
+        function submitYapeForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('yape-name').value;
+            const phone = document.getElementById('yape-phone').value;
+            const address = document.getElementById('yape-address').value;
+            const file = document.getElementById('yape-capture').files[0];
+
+            // Calcular total del carrito
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            // Generar contenido del voucher
+            let voucherContent = `VOUCHER DE PAGO - CLUB CANINO\n\n`;
+            voucherContent += `Fecha: ${new Date().toLocaleString()}\n\n`;
+            voucherContent += `DATOS DEL COMPRADOR:\n`;
+            voucherContent += `Nombre: ${name}\n`;
+            voucherContent += `Teléfono: ${phone}\n`;
+            voucherContent += `Dirección: ${address}\n\n`;
+            voucherContent += `PRODUCTOS SELECCIONADOS:\n`;
+            cart.forEach(item => {
+                voucherContent += `- ${item.name} (Cantidad: ${item.quantity}) - Precio unitario: S/ ${item.price}\n`;
+                if (item.color) voucherContent += `  Color: ${item.color}\n`;
+                if (item.size) voucherContent += `  Talla: ${item.size}\n`;
+            });
+            voucherContent += `\nTOTAL A PAGAR: S/ ${total.toFixed(2)}\n\n`;
+            voucherContent += `MÉTODO DE PAGO: Yape\n`;
+            voucherContent += `Número de Yape: 921799922\n\n`;
+            voucherContent += `Nota: Adjunta la captura de pago al email.\n\n`;
+            voucherContent += `¡Gracias por tu compra! 🐾`;
+
+            // Descargar voucher automáticamente
+            const blob = new Blob([voucherContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `voucher_yape_${name.replace(/\s+/g, '_')}_${Date.now()}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            // Crear el cuerpo del email (incluyendo detalles del voucher)
+            const subject = 'Pago con Yape - Club Canino';
+            const body = `Nombre: ${name}\nTeléfono: ${phone}\nDirección: ${address}\n\nPago realizado con Yape. Número: 921799922\n\nTotal a pagar: S/ ${total.toFixed(2)}\n\nProductos:\n${cart.map(item => `- ${item.name} x${item.quantity} (S/ ${item.price} c/u)`).join('\n')}\n\nNota: La captura de pago no puede ser adjuntada automáticamente. Por favor, adjúntala manualmente junto con el voucher descargado.`;
+
+            // Crear mailto link
+            const mailtoLink = `mailto:y.flores.choque@isur.edu.pe?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Abrir el cliente de email
+            window.location.href = mailtoLink;
+
+            // Cerrar modal y mostrar mensaje
+            closeYapeModal();
+            alert('Voucher generado y descargado. Formulario enviado. Revisa tu cliente de email para completar el envío.');
+        }
+    </script>
+        </section>
+        <footer>
+        <p>&copy; 2023 Club Canino. Todos los derechos reservados. </p>
+    </footer>
+</body>
+</html>

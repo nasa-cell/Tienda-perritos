@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Canino - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+    <header>
+        <div class="logo">
+            <img src="1.png" alt="Imagen 1">
+            <img src="2.png" alt="Imagen 2">
+            <img src="3.png" alt="Imagen 3">
+            <h1>Club Canino</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Club Canino</h1>
+        <div class="hero-buttons">
+            <a href="productos.html" class="btn">Ver Productos</a>
+            <a href="contactos.html" class="btn">Contactos</a>
+        </div>
+    </div>
+    <main>
+        <section class="features">
+            <div class="feature-box">
+                <h3>Envío Rápido</h3>
+                <p>Recibe tus productos en la puerta de tu casa en tiempo récord.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Productos de Calidad</h3>
+                <p>Seleccionamos los mejores artículos para el bienestar de tu mascota.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Pagos Seguros</h3>
+                <p>Realiza tus compras con total confianza y múltiples opciones de pago.</p>
+            </div>
+        </section>
+        <div class="scroll-bottom-space"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Club Canino. Todos los derechos reservados. no suba que se quede abajo</p>
+    </footer>
+    <!-- Botón fijo para ir al checkout (PayPal) en productos.html -->
+    <a href="productos.html#checkout" id="pay-footer-btn" style="position:fixed;right:16px;bottom:16px;z-index:9999;padding:12px 16px;background:#0070ba;color:#fff;border-radius:6px;border:none;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,0.2);text-decoration:none;">Pagar (PayPal)</a>
+</body>
+</html>

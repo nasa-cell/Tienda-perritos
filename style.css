@@ -1,0 +1,827 @@
+fa/* General Styles */
+:root {
+    --footer-height: 64px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Index Page Background */
+.index-page {
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #f5f58d;
+}
+
+/* Hero Section */
+#hero {
+    height: 50vh; /* Half viewport height for larger images */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 3rem; /* Larger font */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Better readability */
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-buttons {
+    margin-top: 1rem;
+}
+
+.hero-buttons .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #45a049;
+}
+
+header {
+    background-color: #863d09;
+    color: white;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Nav: reemplazado float por flex (manteniendo diseño similar) */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #863d09;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.6rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+/* ===== MENÚ: transparente (muestra el café del header), texto blanco,
+   y línea aparece al hover o cuando está activo ===== */
+
+nav ul li a {
+    display: inline-block;
+    background-color: transparent;     /* sin cuadros blancos, muestra el header café */
+    color: #ffffff;                    /* texto blanco */
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid transparent;     /* borde invisible por defecto */
+    transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+/* Al pasar el mouse o enfocar con teclado, aparece la línea blanca */
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:focus-visible {
+    border-color: #ffffff;             /* línea blanca alrededor */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    outline: none;
+}
+
+/* Item activo: mantiene la línea visible indicando selección */
+nav ul li a.active {
+    border-color: #ffffff;             /* línea blanca cuando está seleccionado */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Main + espacio inferior para que no lo tape el footer fijo */
+main {
+    padding: 2rem;
+    padding-bottom: calc(var(--footer-height) + 25rem); /* más espacio para permitir bajar */
+}
+/* Espacio extra al final de la página para permitir scroll */
+.scroll-bottom-space {
+    height: 200px;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.feature-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.feature-box h3 {
+    margin-bottom: 0.5rem;
+    color: #863d09;
+}
+
+.feature-box p {
+    color: #666;
+}
+
+/* Evitamos forzar textos blancos en secciones (mejor heredar color) */
+section h1, section h2, section p {
+    color: inherit;
+}
+
+h2 {
+    padding-bottom: 0.5rem;
+}
+
+/* Styles for product category headings */
+#ropa h2, #comida h2, #juguetes h2, #correas h2 {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+#ropa h2 img, #comida h2 img, #juguetes h2 img, #correas h2 img {
+    height: 40px;
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+/* Product Styles */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.product {
+    background-color: #D3D3D3;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* sombra con opacidad razonable (antes era alpha 1) */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product:hover {
+    /* sombra de hover neutra y visible (no blanco) */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.vision-background {
+    background-color: #DEB887; /* Light brown color */
+    color: black; /* Black text */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    max-height: 240px; /* más predecible que 60% */
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+}
+
+.product p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.product-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.quantity {
+    margin-bottom: 1rem;
+}
+
+/* Add to Cart Button Styles */
+.product-controls button {
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-controls button:hover {
+    background: linear-gradient(135deg, #F57C00, #EF6C00);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-controls button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer: mantenido fijo como en tu versión, pero con z-index y altura controlada */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    height: var(--footer-height);
+    padding: 0.5rem 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Productos Page Background */
+.productos-page {
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Floating Cart Button */
+.floating-cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f7a800;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-cart-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Cart Styles */
+#cart {
+    position: fixed;
+    top: 5%;
+    right: -320px; /* Hidden by default, off-screen to the right */
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: right 0.3s ease; /* Smooth slide transition */
+}
+
+#cart.open {
+    right: 20px; /* Visible position */
+}
+
+#cart h3 {
+    margin-top: 0;
+}
+
+#cart-items {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-details p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.cart-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-controls button {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Contactos Page Styles */
+.contactos-page {
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactos-page main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contactos-page section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.contactos-page h1 {
+    color: #863d09;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.contactos-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactos-page label {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.contactos-page input,
+.contactos-page textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.contactos-page input:focus,
+.contactos-page textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.contactos-page button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.contactos-page button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design: ajusto la grilla de productos correctamente */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos mejorados para el Checkout */
+#checkout {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.1);
+    border: 3px solid #e0e0e0;
+    position: relative;
+    z-index: 70; /* estar por encima del footer fijo */
+    margin-bottom: 6rem; /* espacio extra visible encima del footer */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#checkout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #863d09, #0070ba);
+}
+
+#checkout h3 {
+    color: #863d09;
+    font-size: 2.2rem;
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#checkout form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#checkout form div {
+    margin-bottom: 15px;
+}
+
+#checkout label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 30px;
+}
+
+#checkout label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#checkout label[for="buyer-name"]::before {
+    background-image: url('nonbre.png');
+}
+
+#checkout label[for="buyer-address"]::before {
+    background-image: url('casa.png');
+}
+
+#checkout label[for="buyer-phone"]::before {
+    background-image: url('telefono.png');
+}
+
+#checkout input[type="text"],
+#checkout input[type="tel"] {
+    width: 100%;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    margin: 0;
+    font-size: 1.1rem;
+    background: #fff;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#checkout input[type="text"]:focus,
+#checkout input[type="tel"]:focus {
+    border-color: #0070ba;
+    box-shadow: 0 0 0 3px rgba(0,112,186,0.1);
+    outline: none;
+}
+
+#checkout p {
+    grid-column: span 2;
+    font-weight: 800;
+    color: #222;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #0070ba, #863d09);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Mejoras visuales para el Checkout */
+#checkout {
+    padding: 36px 36px;
+}
+
+#checkout form {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+#checkout label {
+    font-size: 0.98rem;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+#checkout input[type="text"],
+#checkout input[type="tel"] {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.03);
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+    font-size: 1rem;
+}
+
+#checkout input[type="text"]:focus,
+#checkout input[type="tel"]:focus {
+    border-color: #0070ba;
+    box-shadow: 0 8px 24px rgba(0,112,186,0.08);
+    transform: translateY(-1px);
+    outline: none;
+}
+
+#checkout input[type="text"]:hover,
+#checkout input[type="tel"]:hover {
+    border-color: #005a87;
+    box-shadow: 0 4px 12px rgba(0,112,186,0.05);
+}
+
+#checkout:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+.checkout-total-display {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #0070ba, #863d09);
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(0,112,186,0.2);
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.checkout-total-display:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 50px rgba(0,112,186,0.3);
+}
+
+#paypal-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* Mejoras para botones de pago */
+.payment-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 20px 0;
+}
+
+.payment-actions button {
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.payment-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+#pay-footer-btn {
+    background: linear-gradient(135deg, #00b3fa, #00bfff); /* celeste */
+    color: #fff;
+}
+
+#pay-yape-btn {
+    background: linear-gradient(135deg, #800080, #a000a0); /* morado */
+    color: #fff;
+    padding: 25px 50px; /* larger */
+    font-size: 20px;
+}
+
+#pay-yape-btn:hover {
+    background: linear-gradient(135deg, #a000a0, #c000c0);
+}
+
+/* PayPal button container styling */
+#paypal-button-container {
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+#paypal-button-container:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 720px) {
+    #checkout form {
+        grid-template-columns: 1fr;
+    }
+    .checkout-total-display {
+        font-size: 1.1rem;
+        padding: 10px 14px;
+    }
+    .payment-buttons {
+        gap: 15px;
+    }
+    .payment-buttons button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Asegurar que los botones de pago estén por encima del footer fijo */
+#pay-footer-btn {
+    z-index: 102;
+}
+
