@@ -566,7 +566,8 @@ footer {
     position: relative;
     z-index: 70; /* estar por encima del footer fijo */
     margin-bottom: 6rem; /* espacio extra visible encima del footer */
-    overflow: hidden;
+    max-height: 80vh; /* limitar altura para permitir scroll si hay muchas compras */
+    overflow-y: auto; /* permitir scroll con la rueda del mouse */
     transition: all 0.3s ease;
 }
 
