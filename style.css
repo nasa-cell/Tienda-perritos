@@ -1,4 +1,4 @@
-fa/* General Styles */
+/* General Styles */
 :root {
     --footer-height: 64px;
 }
@@ -293,6 +293,14 @@ h2 {
     text-align: center;
 }
 
+.product-title {
+    background-color: #D2B48C; /* medium light brown */
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+}
 .product-controls {
     display: flex;
     flex-direction: column;
